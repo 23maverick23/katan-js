@@ -387,7 +387,7 @@ katan.version;
 
 | Returns  | Description                                                                                    |
 | -------- | ---------------------------------------------------------------------------------------------- |
-| {Object} | Returns an object with all the default color _key: value_ pairs in the format _name: #hexcode_ |
+| {Object} | Returns an object with all the default color `key: value` pairs |
 
 ```javascript
 var colors = Katan.getColors();
@@ -396,28 +396,28 @@ colors.amethyst;
 
 ```
 
-| Color.Key    | Hexcode | Preview                                                                                       |
-| ------------ | ------- | --------------------------------------------------------------------------------------------- |
-| turquoise    | #1ABC9C | <div style="width:200px;height:20px;background:#1ABC9C;" title="turquoise: #1ABC9C"></div>    |
-| greensea     | #16A085 | <div style="width:200px;height:20px;background:#16A085;" title="greensea: #16A085"></div>     |
-| emerland     | #2ECC71 | <div style="width:200px;height:20px;background:#2ECC71;" title="emerland: #2ECC71"></div>     |
-| nephritis    | #27AE60 | <div style="width:200px;height:20px;background:#27AE60;" title="nephritis: #27AE60"></div>    |
-| peterriver   | #3498DB | <div style="width:200px;height:20px;background:#3498DB;" title="peterriver: #3498DB"></div>   |
-| belizehole   | #2980B9 | <div style="width:200px;height:20px;background:#2980B9;" title="belizehole: #2980B9"></div>   |
-| amethyst     | #9B59B6 | <div style="width:200px;height:20px;background:#9B59B6;" title="amethyst: #9B59B6"></div>     |
-| wisteria     | #8E44AD | <div style="width:200px;height:20px;background:#8E44AD;" title="wisteria: #8E44AD"></div>     |
-| wetasphalt   | #34495E | <div style="width:200px;height:20px;background:#34495E;" title="wetasphalt: #34495E"></div>   |
-| midnightblue | #2C3E50 | <div style="width:200px;height:20px;background:#2C3E50;" title="midnightblue: #2C3E50"></div> |
-| sunflower    | #F1C40F | <div style="width:200px;height:20px;background:#F1C40F;" title="sunflower: #F1C40F"></div>    |
-| orange       | #F39C12 | <div style="width:200px;height:20px;background:#F39C12;" title="orange: #F39C12"></div>       |
-| carrot       | #E67E22 | <div style="width:200px;height:20px;background:#E67E22;" title="carrot: #E67E22"></div>       |
-| pumpkin      | #D35400 | <div style="width:200px;height:20px;background:#D35400;" title="pumpkin: #D35400"></div>      |
-| alizarin     | #E74C3C | <div style="width:200px;height:20px;background:#E74C3C;" title="alizarin: #E74C3C"></div>     |
-| pomegranate  | #C0392B | <div style="width:200px;height:20px;background:#C0392B;" title="pomegranate: #C0392B"></div>  |
-| clouds       | #ECF0F1 | <div style="width:200px;height:20px;background:#ECF0F1;" title="clouds: #ECF0F1"></div>       |
-| silver       | #BDC3C7 | <div style="width:200px;height:20px;background:#BDC3C7;" title="silver: #BDC3C7"></div>       |
-| concrete     | #95A5A6 | <div style="width:200px;height:20px;background:#95A5A6;" title="concrete: #95A5A6"></div>     |
-| asbestos     | #7F8C8D | <div style="width:200px;height:20px;background:#7F8C8D;" title="asbestos: #7F8C8D"></div>     |
+| Color.Key    | Hexcode |
+| ------------ | ------- |
+| turquoise    | #1ABC9C |
+| greensea     | #16A085 |
+| emerland     | #2ECC71 |
+| nephritis    | #27AE60 |
+| peterriver   | #3498DB |
+| belizehole   | #2980B9 |
+| amethyst     | #9B59B6 |
+| wisteria     | #8E44AD |
+| wetasphalt   | #34495E |
+| midnightblue | #2C3E50 |
+| sunflower    | #F1C40F |
+| orange       | #F39C12 |
+| carrot       | #E67E22 |
+| pumpkin      | #D35400 |
+| alizarin     | #E74C3C |
+| pomegranate  | #C0392B |
+| clouds       | #ECF0F1 |
+| silver       | #BDC3C7 |
+| concrete     | #95A5A6 |
+| asbestos     | #7F8C8D |
 
 > Colors are taken from [FlatUI](http://designmodo.com/flat-free/) and color swatches can be viewed using the webapp at [http://flatuicolors.com/](http://flatuicolors.com/)
 
