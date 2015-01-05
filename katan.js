@@ -38,8 +38,21 @@
             'wool'   : '\ue004',
             'lumber' : '\ue005',
             'grain'  : '\ue006',
-            'desert' : '\u003F',
-            ''       : ''
+            'desert' : '\u003F'
+        },
+
+        // token information
+        tokenPips = {
+            2  : '\u25CF',                          // ●
+            3  : '\u25CF\u25CF',                    // ●●
+            4  : '\u25CF\u25CF\u25CF',              // ●●●
+            5  : '\u25CF\u25CF\u25CF\u25CF',        // ●●●●
+            6  : '\u25CF\u25CF\u25CF\u25CF\u25CF',  // ●●●●●
+            8  : '\u25CF\u25CF\u25CF\u25CF\u25CF',  // ●●●●●
+            9  : '\u25CF\u25CF\u25CF\u25CF',        // ●●●●
+            10 : '\u25CF\u25CF\u25CF',              // ●●●
+            11 : '\u25CF\u25CF',                    // ●●
+            12 : '\u25CF'                           // ●
         },
 
         // color information
@@ -140,13 +153,13 @@
             strokeWidth            : 0,
 
             innerCircle            : false,
+            innerCircleText        : '',
             innerCircleFill        : flatUIColors.clouds,
             innerCircleStroke      : 'none',
             innerCircleStrokeWidth : 0,
             textFill               : flatUIColors.belizehole,
             fontSize               : 18,
             fontWeight             : 400,
-            resourceIcon           : '',
 
             state                  : false,
             stateFill              : flatUIColors.amethyst,
@@ -191,16 +204,34 @@
                 })
             );
 
-            var _t = (fontUnicode[options.resourceIcon]) ? fontUnicode[options.resourceIcon] : '';
+            var _t;
+            if (fontUnicode[options.innerCircleText] !== undefined) {
+                _t = fontUnicode[options.innerCircleText];
 
-            inner.push(
-                canvas.text(60, 52, _t).attr({
-                    'fill'        : options.textFill,
-                    'font-size'   : options.fontSize,
-                    'font-family' : fontFamily,
-                    'font-weight' : options.fontWeight
-                })
-            );
+                inner.push(
+                    canvas.text(60, 52, _t).attr({
+                        'fill'        : options.textFill,
+                        'font-size'   : options.fontSize,
+                        'font-family' : fontFamily,
+                        'font-weight' : options.fontWeight
+                    })
+                );
+            } else if (parseInt(options.innerCircleText) !== 'NaN') {
+                _t = parseInt(options.innerCircleText);
+
+                inner.push(
+                    canvas.text(60, 50, _t).attr({
+                        'fill'        : options.textFill,
+                        'font-size'   : options.fontSize,
+                        'font-weight' : options.fontWeight
+                    }),
+                    canvas.text(60, 60, tokenPips[_t]).attr({
+                        'fill'        : options.textFill,
+                        'font-size'   : Math.floor(options.fontSize*0.45)
+                    })
+                );
+            }
+
             tile.push(inner);
         }
 
@@ -233,6 +264,10 @@
         }
 
         tile.transform('T' + options.cx + ',' + options.cy + rotate + scale);
+
+        getSet = function () {
+            return tile;
+        }
     }
 
     /**
@@ -334,6 +369,10 @@
         }
 
         road.transform('T' + options.cx + ',' + options.cy + rotate + scale);
+
+        getSet = function () {
+            return road;
+        }
     }
 
     /**
@@ -427,6 +466,10 @@
         }
 
         knight.transform('T' + options.cx + ',' + options.cy + rotate + scale);
+
+        getSet = function () {
+            return knight;
+        }
     }
 
     /**
@@ -522,6 +565,10 @@
         }
 
         settlement.transform('T' + options.cx + ',' + options.cy + rotate + scale);
+
+        getSet = function () {
+            return settlement;
+        }
     }
 
     /**
@@ -617,6 +664,10 @@
         }
 
         city.transform('T' + options.cx + ',' + options.cy + rotate + scale);
+
+        getSet = function () {
+            return city;
+        }
     }
 
     // ******************** //
@@ -770,6 +821,10 @@
     extend(hextile.fn = HexTile.prototype, {
         getOptions : function () {
             return getOptions();
+        },
+
+        getSet : function () {
+            return getSet();
         }
     });
 
@@ -782,6 +837,10 @@
     extend(road.fn = Road.prototype, {
         getOptions : function () {
             return getOptions();
+        },
+
+        getSet : function () {
+            return getSet();
         }
     });
 
@@ -794,6 +853,10 @@
     extend(knight.fn = Knight.prototype, {
         getOptions : function () {
             return getOptions();
+        },
+
+        getSet : function () {
+            return getSet();
         }
     });
 
@@ -806,6 +869,10 @@
     extend(settlement.fn = Settlement.prototype, {
         getOptions : function () {
             return getOptions();
+        },
+
+        getSet : function () {
+            return getSet();
         }
     });
 
@@ -818,6 +885,10 @@
     extend(city.fn = City.prototype, {
         getOptions : function () {
             return getOptions();
+        },
+
+        getSet : function () {
+            return getSet();
         }
     });
 

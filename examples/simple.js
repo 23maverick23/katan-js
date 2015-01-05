@@ -10,7 +10,7 @@ var graintile = new Katan.HexTile(c, {
     fill: colors.sunflower,
     innerCircle: true,
     textFill: colors.sunflower,
-    resourceIcon: 'grain',
+    innerCircleText: 'grain',
     state: true,
     stateFill: colors.sunflower
 });

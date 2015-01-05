@@ -22,7 +22,7 @@ katan-js docs
 - [Katan.City](#katancity)
     + [Katan.City(_canvas_, _options_)](#katancitycanvasoptions)
     + [Katan.City().getOptions()](#katancitygetoptions)
-- [Utility Functions](#utilityfunctions)
+- [Utility Functions](#utility-functions)
     + [Katan.version](#katanversion)
     + [Katan.getColors()](#katangetcolors)
     + [Katan.isKatan()](#kataniskatanobj)
@@ -67,7 +67,7 @@ var c = k.getCanvas();
 
 > Documentation for Raphaël can be found at [http://raphaeljs.com/reference.html](http://raphaeljs.com/reference.html)
 
-[↩ Back to top](#tableofcontents)
+[↩ Back to top](#table-of-contents)
 
 Katan.HexTile
 -------------
@@ -105,15 +105,15 @@ var defaults = {
     strokeWidth            : 0,         // hextile stroke width
 
     innerCircle            : false,     // boolean for displaying inner circle element
+    innerCircleText        : "",        // inner circle text or resource; valid resources are
+                                        // brick, desert, grain, lumber, ore, wool;
+                                        // you can also pass an integer number to show roll with pips
     innerCircleFill        : "#ECF0F1", // inner circle fill color; default is clouds
     innerCircleStroke      : "none",    // inner circle stroke color
     innerCircleStrokeWidth : 0,         // inner circle stroke width
     textFill               : "#2980B9", // inner circle text color; default is belizehole
     fontSize               : 18,        // inner circle font size
     fontWeight             : 400,       // inner circle font weight
-
-    resourceIcon           : "",        // inner circle resource type; valid options
-                                        // are: brick, desert, grain, lumber, ore, wool
 
     state                  : false,     // boolean for enabling inner circle clickable state
     stateCursor            : "pointer", // inner circle cursor on hover
@@ -134,7 +134,7 @@ var defaults = {
 };
 ```
 
-[↩ Back to top](#tableofcontents)
+[↩ Back to top](#table-of-contents)
 
 Katan.Road
 ----------
@@ -192,7 +192,7 @@ var defaults = {
 };
 ```
 
-[↩ Back to top](#tableofcontents)
+[↩ Back to top](#table-of-contents)
 
 Katan.Knight
 ------------
@@ -247,7 +247,7 @@ var defaults = {
 };
 ```
 
-[↩ Back to top](#tableofcontents)
+[↩ Back to top](#table-of-contents)
 
 Katan.Settlement
 ----------------
@@ -307,7 +307,7 @@ var defaults = {
 };
 ```
 
-[↩ Back to top](#tableofcontents)
+[↩ Back to top](#table-of-contents)
 
 Katan.City
 ----------
@@ -367,7 +367,7 @@ var defaults = {
 };
 ```
 
-[↩ Back to top](#tableofcontents)
+[↩ Back to top](#table-of-contents)
 
 Utility Functions
 -----------------
@@ -432,4 +432,4 @@ Katan.isKatan(k);
 // true
 ```
 
-[↩ Back to top](#tableofcontents)
+[↩ Back to top](#table-of-contents)
