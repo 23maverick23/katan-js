@@ -37,14 +37,14 @@ var colors = Katan.getColors();
 var oceantile = new Katan.HexTile(c);
 
 var graintile = new Katan.HexTile(c, {
-    cx: 90,
-    cy: 52,
-    fill: colors.sunflower,
-    innerCircle: true,
-    textFill: colors.sunflower,
-    resourceIcon: 'grain',
-    state: true,
-    stateFill: colors.sunflower
+    cx              : 90,
+    cy              : 52,
+    fill            : colors.sunflower,
+    innerCircle     : true,
+    innerCircleText : 'grain',
+    textFill        : colors.sunflower,
+    state           : true,
+    stateFill       : colors.sunflower
 });
 ```
 
