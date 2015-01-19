@@ -73,7 +73,7 @@ Available in the [docs](https://github.com/rymoio/katan-js/tree/master/docs) dir
 Dependencies
 ------------
 
-Requires that `raphael.js` v2.1.2+ is loaded on the page. Optionally, you can load the `katan+raphael.min.js` file on your page which includes all needed features.
+Requires that `raphael.js` v2.1.1+ is loaded on the page. Optionally, you can load the `katan+raphael.min.js` file on your page which includes all needed features.
 
 Requires that `katan.css` is loaded on the page, and that the `font` directory has been copied correctly.
 

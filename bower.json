@@ -1,0 +1,35 @@
+{
+  "name": "katan-js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rymoio/katan-js",
+  "authors": [
+    "Ryan Morrissey <23maverick23@gmail.com>"
+  ],
+  "description": "A simple helper library for creating Catan themed SVG objects with the Raphael library.",
+  "main": [
+    "katan.js",
+    "katan.css",
+    "fonts/Katan.eot",
+    "fonts/Katan.svg",
+    "fonts/Katan.ttf",
+    "fonts/Katan.woff"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "examples",
+    "docs",
+    "build.js",
+    "CHANGELOG",
+    "katan-extras.js",
+    "*.sublime-project",
+    "*.sublime-workspace",
+    "raphael.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "raphael": ">= 2.1.1"
+  }
+}
