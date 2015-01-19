@@ -1,4 +1,5 @@
-var k = new Katan('complex-example', 325, 325);
+var p = new Raphael('complex-example', 325, 325);
+var k = new Katan(p);
 var c = k.getCanvas();
 var colors = Katan.getColors();
 

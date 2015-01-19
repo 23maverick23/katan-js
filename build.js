@@ -24,6 +24,9 @@ console.log('\tkatan.min.js - Done');
 buildJSFile(['raphael.js', 'katan.js'], 'katan+raphael.min.js');
 console.log('\tkatan+raphael.min.js - Done');
 
+buildJSFile('katan-extras.js', 'katan-extras.min.js');
+console.log('\tkatan-extras.min.js - Done');
+
 buildCSSFile(['katan.css'], 'katan.min.css');
 console.log('\tkatan.min.css - Done');
 

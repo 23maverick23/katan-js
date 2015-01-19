@@ -116,21 +116,49 @@
     /**
      * Katan prototype object
      *
-     * @param {Str} a DOM element id string
-     * @param {Int} cx coordinate for transform
-     * @param {Int} cy coordinate for transform
+     * @param {Object} a Raphael.Paper object
+     * @param {Str} (Optional) a string value to override the defaul preserveAspectRatio attr
+     * @param {Object} (Optional) an object to set the viewbox (used for zooming the canvas)
      */
-    function Katan(id, width, height) {
+    function Katan(paper, viewbox, aspect) {
         var _isAKatanObject = true,
-            paper = Raphael(id, width, height);
-        paper.canvas.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+            p = paper,
+            v = (viewbox || {}),
+            a = (aspect || 'xMidYMid meet');
 
-        getId = function () {
-            return id;
+        if (!paper instanceof Raphael._Paper) {
+            printMsg('error', 'You must pass a valid Raphael paper object!');
+            return;
         }
 
+        p.canvas.setAttribute('preserveAspectRatio', a);
+
+        if (v && Object.keys(v).length > 0) {
+            try {
+                p.setViewBox(
+                    (v.x || 0),
+                    (v.y || 0),
+                    v.w,
+                    v.h,
+                    (v.fit || true)
+                );
+            } catch (e) {
+                printMsg('error', 'Your viewbox keys caused an error: ' + e);
+            }
+        }
+
+        getId = function () {
+            return p.canvas.parentElement.id;
+        }
+
+        // DEPRECATED in 2.0.0
         getCanvas = function () {
-            return paper;
+            printMsg('warn', 'This method has been deprecated in favor of Katan().getPaper()');
+            return p;
+        }
+
+        getPaper = function () {
+            return p;
         }
     }
 
@@ -755,8 +783,8 @@
     //    TOP LEVEL FUNCTIONS    //
     // ************************* //
 
-    katan = function (id, width, height) {
-        return new Katan(id, width, height);
+    katan = function (paper, viewbox, aspect) {
+        return new Katan(paper, viewbox, aspect);
     };
 
     // version number
@@ -809,6 +837,10 @@
 
         getCanvas : function () {
             return getCanvas();
+        },
+
+        getPaper : function () {
+            return getPaper();
         }
     });
 
