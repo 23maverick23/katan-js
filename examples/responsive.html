@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>katan-js: responsive example</title>
+        <link rel="stylesheet" type="text/css" href="../css/katan.css">
+    </head>
+    <body style="background: #2980b9; padding-top: 60px;">
+        <div id="complex-example" style="text-align: center;"></div>
+        <div id="dimensions" style="width:100px;height:30px;background-color:#FFF;opacity:0.6;bottom:0;right:0;display:box;position:fixed;text-align:right;font-size:20px;padding:5px;"></div>
+        <script src="../min/katan+raphael.min.js"></script>
+        <script src="responsive.js"></script>
+        <script type="text/javascript">
+            window.onresize = displayWindowSize;
+            window.onload = displayWindowSize;
+            function displayWindowSize() {
+                var wW = window.innerWidth,
+                    wH = window.innerHeight;
+                document.getElementById("dimensions").innerHTML = wW + " x " + wH;
+            };
+        </script>
+    </body>
+</html>

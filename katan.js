@@ -4,7 +4,7 @@
  *        .-^^^-/ /
  *     __/       /
  *    <__.|_|-|_|   katan-js
- *                  version : 1.0.0
+ *                  version : 1.1.0
  *                  author  : Ryan Morrissey
  *                  license : MIT
  *                  website : https://rymo.io/
@@ -24,7 +24,7 @@
         settlement,
         city,
 
-        VERSION = '1.0.0',
+        VERSION = '1.1.0',
 
         hasOwnProperty = Object.prototype.hasOwnProperty,
         parseInt = window.parseInt,
@@ -124,7 +124,7 @@
         var _isAKatanObject = true,
             p = paper,
             v = (viewbox || {}),
-            a = (aspect || 'xMidYMid meet');
+            a = (aspect || 'xMinYMin meet');
 
         if (!paper instanceof Raphael._Paper) {
             printMsg('error', 'You must pass a valid Raphael paper object!');
@@ -790,8 +790,13 @@
     // version number
     katan.version = VERSION;
 
+    katan.setFontFamily = function (font_override) {
+        this.fontFamily = font_override;
+        return this.fontFamily;
+    }
+
     // expose default colors for customization
-    katan.getColors = function() {
+    katan.getColors = function () {
         return flatUIColors;
     }
 
